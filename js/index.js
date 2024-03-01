@@ -41,12 +41,12 @@ $(function(){
     },
 
     afterLoad: function(origin, destination, direction, trigger){
-     if(destination.index==2 || destination.index==3 || destination.index==5 || destination.index==7){
+     if(destination.index==2 || destination.index==3 || destination.index==5 || destination.index==6 || destination.index==7){
       $('.header').removeClass('up');
-      $('#left_nav').removeClass('up');
-     }else if(destination.index==0 || destination.index==1 ||destination.index==4 || destination.index==6){
+      $('#right_nav').removeClass('up');
+     }else if(destination.index==0 || destination.index==1 ||destination.index==4){
       $('.header').addClass('up');
-      $('#left_nav').addClass('up');
+      $('#right_nav').addClass('up');
      }
 
 
@@ -115,48 +115,112 @@ $(function(){
     slideMargin: 5,
     pager: false,
   });
-
-// $('.slider4').bxSlider({
-//     minSlides: 5,
-//     maxSlides: 10,
-//     slideWidth: 170,
-//     auto: true, 
-//     controls: false,
-//     speed: 5000,
-//     pause: 0,
-//     infiniteLoop:true,
-//     pager:false,
-//   });
-
-
-
 })//jq
 
 
+// map
 
-var markers = document.querySelectorAll('map[name="image-map"] area');
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+
+$(document).ready(function() {
+  $('map[name="image-map"] area').click(function(e) {
+    e.preventDefault();
+    var markerId = $(this).attr('id');
+    var popupId = 'popup' + markerId.substr(-1);
+    var markerLabel = $('#marker' + markerId.substr(-1) + '-label');
+    var popup = $('#' + popupId);
+
+    // 팝업과 마커 레이블 초기화
+    $('.popup').hide();
+    $('.marker-label').removeClass('click');
+
+    // 클릭한 마커에 대한 팝업과 마커 레이블 표시
+    popup.show();
+    markerLabel.addClass('click');
+
+    // 이벤트 전파 중지
+    e.stopPropagation();
+  });
+
+  $('map[name="image-map"] area').mouseover(function(){
+    var markerId = $(this).attr('id');
+    var markerLabel = $('#marker' + markerId.substr(-1) + '-label');
+    markerLabel.addClass('hovered')
+  })
+
+  $('map[name="image-map"] area').mouseout(function(){
+    var markerId = $(this).attr('id');
+    var markerLabel = $('#marker' + markerId.substr(-1) + '-label');
+    markerLabel.removeClass('hovered')
+  })
+
+
+  // 문서의 다른 부분 클릭 시
+
+  $(document).click(function(e){
+    if(!$(e.target).closest('map[name="image-map"]').length){
+      $('.popup').hide();
+      $('.marker-label').removeClass('click');
+    }
+  })
+});
+
+/*var markers = document.querySelectorAll('map[name="image-map"] area');
+var markerLabels = document.querySelectorAll('.marker-label');
+
 markers.forEach(function(marker) {
   marker.addEventListener('click', function(e) {
     e.preventDefault();
     var markerId = this.getAttribute('id');
     var popupId = 'popup' + markerId.substr(-1);
+    var markerLabel = document.getElementById('marker' + markerId.substr(-1) + '-label');
+    var popup = document.getElementById(popupId);
 
     // 모든 팝업을 일단 닫기
     document.querySelectorAll('.popup').forEach(function(popup) {
       popup.style.display = 'none';
     });
 
+    // 모든 마커 레이블의 클래스 제거
+    markerLabels.forEach(function(label) {
+      label.classList.remove('hovered');
+    });
+
     // 클릭된 마커에 해당하는 팝업 열기
-    document.getElementById(popupId).style.display = 'block';
+    popup.style.display = 'block';
+
+    // 클릭된 마커의 레이블 색상 변경
+    markerLabel.classList.add('hovered');
+
+    // 클릭된 마커의 이벤트 전파 방지
+    e.stopPropagation();
   });
 });
 
+// close 버튼에 클릭 이벤트 추가
 document.querySelectorAll('.close').forEach(function(closeButton) {
   closeButton.addEventListener('click', function() {
     // 부모 요소인 팝업을 찾아서 display 속성을 변경
     this.parentNode.style.display = 'none';
+
+    // 닫힐 때 해당 마커 레이블의 클래스 제거
+    var popupId = this.parentNode.id;
+    var markerId = popupId.substr(5);
+    var markerLabel = document.getElementById('marker' + markerId + '-label');
+    markerLabel.classList.remove('hovered');
   });
 });
+
+// 마커 외의 다른 곳을 클릭할 때 마커 레이블의 색상 원래대로 변경
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.map-img')) {
+    markerLabels.forEach(function(label) {
+      label.classList.remove('hovered');
+    });
+  }
+});*/
 
     
 

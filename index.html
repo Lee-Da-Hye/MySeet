@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>마이스윗인터뷰</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!--제이쿼리 라이브러리 연결-->
   <script src="libs/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!--풀페이지-->
   <script src="libs/fullpage/fullpage.min.js"></script>
   <link href="libs/fullpage/fullpage.min.css" rel="stylesheet">
@@ -159,10 +160,10 @@
     <div class="rental-info-wrap">
       <div class="rental-info">
         <div class="info1 info">
-          <img src="images/rental-info/info1.png" alt="렌탈인포메인션 이미지">
+          <!-- <img src="images/rental-info/info1.png" alt="렌탈인포메인션 이미지"> -->
         </div>
         <div class="info2 info" >
-          <img src="images/rental-info/info2.png" alt="">
+          <!-- <img src="images/rental-info/info2.png" alt=""> -->
           <div class="caption">
             <a href="#">대여가격안내<span></span></a>
             <div class="info-box">
@@ -174,7 +175,7 @@
 
         </div>
         <div class="info3 info">
-          <img src="images/rental-info/info3.png" alt="">
+          <!-- <img src="images/rental-info/info3.png" alt=""> -->
           <div class="caption">
             <a href="#">대여가격안내<span></span></a>
             <div class="info-box">
@@ -186,7 +187,7 @@
           
         </div>
         <div class="info4 info";>
-          <img src="images/rental-info/info4.png" alt="">
+          <!-- <img src="images/rental-info/info4.png" alt=""> -->
           <div class="caption">
             <a href="#">대여가격안내<span></span></a>
             <div class="info-box">
@@ -198,7 +199,7 @@
           </div>
         </div>
         <div class="info5 info">
-          <img src="images/rental-info/info5.png" alt="">
+          <!-- <img src="images/rental-info/info5.png" alt=""> -->
           <div class="caption">
             <a href="#">대여가격안내<span></span></a>
             <div class="info-box">
@@ -320,98 +321,171 @@
 </div>
 <!--//섹션6끝-->
 <div class="section section7" style="background-color: #fff">
-  <div class="map-wrap">
-    <div class="location-contents">
-      <span>마이스윗인터뷰 4개 지점</span>
-      <h2>LOCATION</h2>
-      <p>전 지점 지하철역 도보 2분</p>
-    </div>
-    <div class="map-img">
-      <img src="images/map/map.svg" usemap="#image-map">
-      <map name="image-map">
-          <area id="marker1" class="marker" alt="신촌점" title="신촌점" href="" coords="254,298,256,286,266,276,294,274,299,260,314,255,321,241,333,232,342,234,342,248,351,253,354,274,346,308,366,333,342,352,302,348" shape="poly">
-          <area id="marker2" class="marker" alt="영등포구청점" title="영등포구청점" href="" coords="204,371,206,389,216,404,217,414,201,429,201,462,218,471,227,502,230,528,246,534,247,520,261,511,274,508,280,476,288,461,271,407" shape="poly">
-          <area id="marker3" class="marker" alt="사당점" title="사당점" href="" coords="259,536,266,526,280,521,289,512,325,512,346,522,352,545,363,559,382,561,390,555,387,567,404,595,384,618,352,652,295,649,283,623,261,604" shape="poly">
-          <area id="marker4" class="marker" alt="천호점" title="천호점" href="" coords="634,387,638,366,654,346,674,335,693,334,737,312,742,327,754,339,749,356,757,386,736,400,701,409,686,455,669,450,656,446,641,423,649,400" shape="poly">
-      </map>
-      <div id="popup1" class="popup">
-        <span class="close">&times;</span>
-        <div class="popup-content">
-          <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
-              <div class="pop-t">
-                <p>사당점</p>
-                <p>관악구 승방6길 34 성창빌딩 1층</p>
-              </div>
-              <div class="pop-m">
-                <p>02-522-3010</p>
-                <p>010-8942-3010</p>
-              </div>
-              <div class="pop-m">
-                <p>매장 주차 무료</p>
-                <p>월요일-금요일: <span>10:00 a.m. – 8:00 p.m.</span></p>
-                <p>주 말 / 공휴일: <span>10:00 a.m. – 6:00 p.m.</span></p>
-                <p>휴식시간:<span>1:00 p.m. – 2:00 p.m.</span></p>
-              </div>
-        </div>
+  <div class="map-container">
+    <div class="map-wrap">
+      <div class="location-contents">
+        <span>마이스윗인터뷰 4개 지점</span>
+        <h2>LOCATION</h2>
+        <p>전 지점 지하철역 도보 2분</p>
       </div>
-      <div id="popup2" class="popup">
-        <span class="close">&times;</span>
-        <div class="popup-content">
-          <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
-              <div class="pop-t">
-                <p>영등포구청점</p>
-                <p>관악구 승방6길 34 성창빌딩 1층</p>
-              </div>
-              <div class="pop-m">
-                <p>02-522-3010</p>
-                <p>010-8942-3010</p>
-              </div>
-              <div class="pop-m">
-                <p>매장 주차 무료</p>
-                <p>월요일-금요일: <span>10:00 a.m. – 8:00 p.m.</span></p>
-                <p>주 말 / 공휴일: <span>10:00 a.m. – 6:00 p.m.</span></p>
-                <p>휴식시간:<span>1:00 p.m. – 2:00 p.m.</span></p>
-              </div>
-        </div>
-      </div><div id="popup3" class="popup">
-        <span class="close">&times;</span>
-        <div class="popup-content">
+      <div class="map-img">
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <img src="images/map/map.svg" usemap="#image-map">
+        <map name="image-map">
+            <area id="marker1" alt="marker1" title="신촌점" coords="255,299,257,287,266,276,296,275,299,261,314,257,322,243,334,234,340,234,340,247,351,252,355,273,346,307,364,332,341,351,305,348" shape="poly" href="#">
+            <area id="marker2" alt="marker2" title="영등포구청점" coords="205,372,202,377,217,406,217,416,201,430,202,461,217,470,227,501,230,506,230,528,242,538,248,535,247,521,255,513,271,511,279,494,281,480,284,458,271,405" shape="poly" href="#">
+            <area id="marker3" alt="marker3" title="사당점" coords="285,514,329,514,348,524,353,546,365,560,381,561,388,557,391,568,404,597,379,623,351,650,308,653,294,637,282,626,277,614,265,601,259,547,251,536,279,525" shape="poly" href="#">
+            <area id="marker4" alt="marker4" title="천호점" coords="633,386,639,362,655,346,673,337,698,332,717,323,737,312,744,327,754,339,749,356,757,383,741,396,701,409,696,431,683,452,669,447,658,444,648,427,642,420,648,394" shape="poly" href="#">
+        </map>
+        <div id="marker1-label" class="marker-label">신촌점</div>
+        <div id="marker2-label" class="marker-label">영등포구청점</div>
+        <div id="marker3-label" class="marker-label">사당점</div>
+        <div id="marker4-label" class="marker-label">천호점</div>
+        <div id="popup1" class="popup">
           <div class="popup-content">
             <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
-                <div class="pop-t">
-                  <p>사당점</p>
-                  <p>관악구 승방6길 34 성창빌딩 1층</p>
+            <ul>
+              <li class="spot">서대문구 신촌로 87-8 다니엘빌딩 3~4층</li>
+              <li class="tel-wrap">
+                <div>
+                  <p class="tel">0507-1494-3028</p>
+                  <p class="pdl26">010-2676-3010</p>
                 </div>
-                <div class="pop-m">
-                  <p>02-522-3010</p>
-                  <p>010-8942-3010</p>
+              </li>
+              <li class="car">현대백화점 주차 이용(유료)</li>
+              <li>
+                <div>
+                  <ul class="calender">
+                    <li>
+                      <span class="cal cal-title">월요일-금요일:</span>
+                      <span class="pdl24">10:00 a.m. – 8:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">주말 / 공휴일:</span>
+                      <span class="pdl24">10:00 a.m. – 6:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">휴식시간:</span>
+                      <span class="pdl24">1:00 p.m. – 2:00 p.m.</span>
+                    </li>
+                  </ul>
                 </div>
-                <div class="pop-m">
-                  <p>매장 주차 무료</p>
-                  <p>월요일-금요일: <span>10:00 a.m. – 8:00 p.m.</span></p>
-                  <p>주 말 / 공휴일: <span>10:00 a.m. – 6:00 p.m.</span></p>
-                  <p>휴식시간:<span>1:00 p.m. – 2:00 p.m.</span></p>
-                </div>
+                
+                
+              </li>
+            </ul>
           </div>
         </div>
-      </div><div id="popup4" class="popup">
-        <span class="close">&times;</span>
-        <div class="popup-content">
-          <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
-              <div class="pop-t">
-                <p>천호점</p>
-                <p>관악구 승방6길 34 성창빌딩 1층</p>
-              </div>
-              <div class="pop-m">
-                <p>02-522-3010</p>
-                <p>010-8942-3010</p>
-              </div>
-              <div class="pop-m">
-                <p>매장 주차 무료</p>
-                <p>월요일-금요일: <span>10:00 a.m. – 8:00 p.m.</span></p>
-                <p>주 말 / 공휴일: <span>10:00 a.m. – 6:00 p.m.</span></p>
-                <p>휴식시간:<span>1:00 p.m. – 2:00 p.m.</span></p>
-              </div>
+        <!-- 선 -->
+        <div id="marker1-connector" class="popup-connector"></div>
+        <div id="popup2" class="popup">
+          <div class="popup-content">
+            <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
+            <ul>
+              <li class="spot">영등포구 국회대로 547 부천빌딩 2층</li>
+              <li class="tel-wrap">
+                <div>
+                  <p class="tel">0507-1412-3027</p>
+                  <p class="pdl26">010-4294-3020</p>
+                </div>
+              </li>
+              <li class="car">전용 주차공간(4번칸) 무료</li>
+              <li>
+                <div>
+                  <ul class="calender">
+                    <li>
+                      <span class="cal cal-title">월요일-금요일:</span>
+                      <span class="pdl24">10:00 a.m. – 8:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">주 말 / 공휴일:</span>
+                      <span class="pdl24">10:00 a.m. – 6:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">휴식시간:</span>
+                      <span class="pdl24">1:00 p.m. – 2:00 p.m.</span>
+                    </li>
+                    <li><span class="pdl24 cal-title">일요일 / 공휴일: 휴무</span></li>
+                  </ul>
+                </div>
+                
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="popup3" class="popup">
+          <div class="popup-content">
+            <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
+            <ul>
+              <li class="spot">관악구 승방6길 34 성창빌딩 1층</li>
+              <li class="tel-wrap">
+                <div>
+                  <p class="tel">02-522-3010</p>
+                  <p class="pdl26">010-8942-3010</p>
+                </div>
+              </li>
+              <li class="car">매장 주차 무료</li>
+              <li>
+                <div>
+                  <ul class="calender">
+                    <li>
+                      <span class="cal cal-title">월요일-금요일:</span>
+                      <span class="pdl24">10:00 a.m. – 8:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">주 말 / 공휴일:</span>
+                      <span class="pdl24">10:00 a.m. – 8:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">휴식시간:</span>
+                      <span class="pdl24">1:00 p.m. – 2:00 p.m.</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="popup4" class="popup">
+          <div class="popup-content">
+            <div class="pop-img"><img src="images/map/map_a_sin_1.jpg" alt=""></div>
+            <ul>
+              <li class="spot">강동구 천호대로 151길 36
+                DSA빌딩 8층</li>
+              <li class="tel-wrap">
+                <div>
+                  <p class="tel">0507-1413-3027
+                  </p>
+                  <p class="pdl26">010-4474-3020</p>
+                </div>
+              </li>
+              <li class="car">전용 무료주차 4대료</li>
+              <li>
+                <div>
+                  <ul class="calender">
+                    <li>
+                      <span class="cal cal-title">월요일-금요일:</span>
+                      <span class="pdl24">10:00 a.m. – 8:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">주 말 / 공휴일:</span>
+                      <span class="pdl24">10:00 a.m. – 6:00 p.m.</span>
+                    </li>
+                    <li>
+                      <span class="pdl24 cal-title">휴식시간:</span>
+                      <span class="pdl24">1:00 p.m. – 2:00 p.m.</span>
+                    </li>
+                    <li><span class="pdl24 cal-title">공휴일 : 휴무 / 임시영업(문의 필요)</span></li>
+                  </ul>
+                </div>
+                
+                
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -520,5 +594,6 @@
 </ul>  
 <script src="js/index.js"></script>
 <script src="js/swiper.js"></script>
+<script src="libs/jquery.rwdImageMaps.min.js"></script>
 </body>
 </html>

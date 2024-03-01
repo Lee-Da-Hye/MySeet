@@ -4,7 +4,7 @@
 /*해더*/
 
 .header{width: 100%; min-width: 1200px; height: 80px;position: relative;}
-.header .inner{display: flex; align-items: jus; justify-content: center;}
+.header .inner{display: flex; align-items: center; justify-content: center;}
 .header #logo{height: 80px;width: 340px; font-size: 23px; display: flex;  margin-right: 140px; align-items: center;/*background: url(../images/layout/logo.png) no-repeat center #660a0a;text-indent: -9999px;*/}
 
 .header .gnb{z-index: 500;position: relative; display: flex; gap: 40px; align-items: center;}
@@ -24,25 +24,26 @@
 /*해더 컨트롤 gnb hover 시*/
 /*addClass('on')*/
 .header.on{background: #2A4060;transition: background 0.35s}
-.header.on #logo > a{color: #fff;}
-.header.on .gnb .dep1>a{color:#fff;}
+.header.on #logo > a,
+.header.up #logo > a{color: #fff;}
+.header.on .gnb .dep1>a,
+.header.up .gnb .dep1>a{color:#fff;}
 
 /*addClass('up')*/
-/* .header.up #logo{background-color: #666;} */
+
 .header #logo > a{color: #2A4060;}
 .header .gnb .dep1>a{color: #2A4060;}
-.header.up #logo a{color:#fff;}
-.header.up .gnb .dep1>a{color:#fff;}
 
 
 /*섹션1*/
+.section{height: 100vh;}
 .section1{background: #333}
 .section1_slider{position: absolute;left:0;top:0;width:100%;height: 100%;min-height: 100%;min-width: 100%}
 
 /*bxslider 수정 시작*/
 .section1_slider img{width: 100%;height: 100%;min-width: 100%;min-height: 100%;}
 .bx-wrapper{box-shadow:none;border:none;background: none;margin-bottom: 0;min-height: 100%;height: 100%}
-.bx-viewport{min-height: 100%;height: 100%}
+
 .bx-wrapper .bx-controls-auto{bottom:60px;z-index: 6000}
 .bx-wrapper .bx-controls-auto .bx-start{background: url(../images/main/popupzone_control_play.png) no-repeat center;width: 8px;height: 15px}
 .bx-wrapper .bx-controls-auto .bx-stop{background: url(../images/main/popupzone_control_stop.png) no-repeat center;width: 8px;height: 15px}
@@ -271,61 +272,57 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
 .section6 .swiper-button-next{display: none;}
 
 /* section7 */
-.map-wrap{display: grid; grid-template-columns: 1fr 2fr; align-items: center;}
-.location-contents{width: 35%;}
-.map-img{width: 75%; position: relative;}
+.map-container{max-width: 1300px; height: auto; margin: auto;}
+.map-wrap{display:flex; justify-content: center;}
+.location-contents{width: 45%; margin-top: 8rem;margin-left: 4.5rem;}
+.location-contents > h2{font-size: 3rem;font-weight: 700; margin-top: 4px; margin-bottom: 16px;}
+.location-contents > p{font-size: 2.8rem; white-space: nowrap;}
+.map-img{width: 65%; position: relative; padding: 4rem 2rem; z-index: 999;}
+.map-img img{width: 100%; height: auto;}
+.marker-label {position: absolute;font-size: 14px;color: black; background-color: #D5D5D5;padding: 5px; border-radius: 5px;}
+.hovered{background-color: #0468BE; color: #fff;}
+.click{background-color: #0468BE; color: #fff;}
 
-.popup {
-      display: none;
-      position: absolute;
-      top: 15%;
-      z-index: 999;
-      padding: 20px;
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
+#marker1-label {top: 34%;left: 40%;}
+#marker2-label {top: 53%;left: 31%;}
+#marker3-label {top: 69%;left: 41%;}
+#marker4-label {top: 43%;left: 84%;}
+
+/* popup */
+.popup {display: none; position: absolute;top: 42%;left: -305px;z-index: 999;width: 275px;height: 400px;background-color: white;border: 1px solid #ccc;border-radius: 8px;box-shadow: 0 2px 5px rgba(0,0,0,0.2);}
+.popup-content{font-size: 13px;}
+.popup-content > ul{padding: 0.5rem;}
+.popup-content > ul > li{padding-bottom: 10px;}
+.popup-content > ul > li .cal li{padding-bottom: 10px;}
+
+.calender > li{
+      display: flex;
+      flex-direction: column;
+}
   .close {
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
   }
-  #map-img {
-      position: relative;
-      z-index: 999;
-  }
-  .hovered {
-      background-color: rgba(255, 255, 255, 0.5); /* 투명한 하얀색 배경 */
-  }
-  #map-img img {
-      width: 100%;
-      height: auto;
-  }
-  
+
+  .pdl24{padding-left: 24px; line-height: 1.4;}
+  .pdl26{padding-left: 26px;} 
+  .cal-title{font-weight: 600;}
   /* 이미지 맵 영역 스타일 */
-  #image-map area {
-      outline: none; /* 이미지 맵 영역 주위의 외곽선 제거 */
-  }
 
-  .marker:hover {
-      background-color: rgba(255, 24, 24, 0.5); /* 마커에 호버할 때 배경색을 변경합니다. */
-      transition: background-color 0.3s; /* 부드러운 전환 효과를 추가합니다. */
-  }
-  .map-img area {
-      display: inline-block; /* 각 마커를 블록 요소로 표시합니다. */
-      width: 10px; /* 마커의 너비를 조정합니다. */
-      height: 10px; /* 마커의 높이를 조정합니다. */
-      background-color: red; /* 마커의 배경색을 지정합니다. */
-      border-radius: 50%; /* 원 모양의 마커를 만듭니다. */
-      margin: 5px; /* 마커 간 간격을 설정합니다. */
-  }
-.pop-img{width: 300px; height: 200px;}
-.pop-img img{width: 100%; height: 100%;}
-
-  #marker1{position: absolute; top: 50%;}
-  .shape{background-color: #0468BE;}
+.pop-img{width: 275px;}
+.pop-img img{width: 100%; height: 100%; border-radius: 8px 8px 0px 0px;}
+.popup-content .spot::before,
+.popup-content .tel::before,
+.popup-content .car::before,
+.popup-content .cal::before{content: ''; display: inline-block; width:21px; height: 21px; margin-right: 5px; vertical-align: middle;}
+.popup-content .spot::before{background: url(../images/map/spot-icon.png) no-repeat left top/12px}
+.popup-content .tel::before{background: url(../images/map/tel.png) no-repeat center center/12px}
+.popup-content .car::before{background: url(../images/map/car-icon.png) no-repeat left center/12px}
+.popup-content .cal::before{background: url(../images/map/calendar.png) no-repeat left center/12px}
+.calender p{padding-bottom: 4px; text-align: justify;}
+.tel-wrap{text-align: justify;}
 /*instagram-contents*/
 .section8{background-color: #fff; }
 .section8 .sns-title{text-align: center; margin-top: 100px;}
