@@ -299,16 +299,9 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
       display: flex;
       flex-direction: column;
 }
-  .close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-  }
-
-  .pdl24{padding-left: 24px; line-height: 1.4;}
-  .pdl26{padding-left: 26px;} 
-  .cal-title{font-weight: 600;}
+.pdl24{padding-left: 24px; line-height: 1.4;}
+.pdl26{padding-left: 26px;} 
+.cal-title{font-weight: 500;}
   /* 이미지 맵 영역 스타일 */
 
 .pop-img{width: 275px;}
@@ -317,10 +310,10 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
 .popup-content .tel::before,
 .popup-content .car::before,
 .popup-content .cal::before{content: ''; display: inline-block; width:21px; height: 21px; margin-right: 5px; vertical-align: middle;}
-.popup-content .spot::before{background: url(../images/map/spot-icon.png) no-repeat left top/12px}
+.popup-content .spot::before{background: url(../images/map/spot-icon.png) no-repeat center center/12px}
 .popup-content .tel::before{background: url(../images/map/tel.png) no-repeat center center/12px}
-.popup-content .car::before{background: url(../images/map/car-icon.png) no-repeat left center/12px}
-.popup-content .cal::before{background: url(../images/map/calendar.png) no-repeat left center/12px}
+.popup-content .car::before{background: url(../images/map/car-icon.png) no-repeat center center/12px}
+.popup-content .cal::before{background: url(../images/map/calendar.png) no-repeat center center/12px}
 .calender p{padding-bottom: 4px; text-align: justify;}
 .tel-wrap{text-align: justify;}
 /*instagram-contents*/
