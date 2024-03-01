@@ -1,12 +1,5 @@
-*{font-family: 'SCDream';
-	font-weight: 500;
-	src: url(../assets/fonts/SCDream4.woff) format('woff');
-}
-body{background: #ccc}
 
 #topBox{width:100%;min-width: 1200px;position: fixed;top:0;left:0;z-index: 5000}
-
-
 
 /*해더*/
 
@@ -252,7 +245,7 @@ body{background: #ccc}
 /* .section6 */
 .section6{background-color: #fff;}
 .section6 .carousel-title{width: 35%; padding: 2rem;}
-.section6 .carousel-title::after{content: ''; background: url(../images/rental-method/mysweet.svg) no-repeat center/80%; display: inline-block; background-size: 150px;width: 200px;height: 200px;}
+/* .section6 .carousel-title::after{content: ''; background: url(../images/rental-method/mysweet.svg) no-repeat center/80%; display: inline-block; background-size: 150px;width: 200px;height: 200px;} */
 .section6 .carousel-title span{padding-bottom: 10px; display: block; font-size: 1rem; color: #A0A0A0; font-weight: 600;}
 .section6 .titlefs{font-size: 3rem; font-weight: 600; line-height: 1.2;}
 .section6 .rental-method{display: flex; margin-top: 80px}
@@ -285,7 +278,7 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
 .popup {
       display: none;
       position: absolute;
-      
+      top: 15%;
       z-index: 999;
       padding: 20px;
       background-color: white;
@@ -293,10 +286,6 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
-  #popup1{top: 15%; right: 50%; transform: translateX(-55%);}
-  #popup2{top: 33%; right: 50%; transform: translateX(-70%);}
-  #popup3{top: 33%; right: 50%; transform: translateX(-70%);}
-  #popup4{top: 28%;right: 18%;}
   .close {
       position: absolute;
       top: 10px;
