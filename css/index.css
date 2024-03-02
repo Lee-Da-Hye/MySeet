@@ -365,7 +365,7 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
 
 /*right_nav*/
 
-#right_nav{position: fixed;right:20px;top:50%;transform:translateY(-50%);z-index: 10000}
+#right_nav{position: fixed;left:20px;top:50%;transform:translateY(-50%);z-index: 10000}
 #right_nav ul li{width: 9px;height: 9px;margin-top: 40px}
 #right_nav ul li:nth-child(1){margin-top: 0}
 #right_nav ul li *{transition: all 0.25s;}
@@ -374,14 +374,14 @@ border-radius: 1rem;height: 10rem;overflow: hidden;width: 100%;}
 #right_nav ul li:last-child a span{display: none}
 #right_nav ul li a::after{display: block;width: 100px;font-size: 13px;line-height: 13px; position: absolute;
 left: -110px; top: -2px; color: #afafaf; text-align: right;font-weight: bold}
-#right_nav ul li:nth-child(1) a::after{content:"HOME"}
-#right_nav ul li:nth-child(2) a::after{content:"ABOUT"}
-#right_nav ul li:nth-child(3) a::after{content:"대여가격안내"}
-#right_nav ul li:nth-child(4) a::after{content:"쇼핑몰"}
-#right_nav ul li:nth-child(5) a::after{content:"인포메이션"}
-#right_nav ul li:nth-child(6) a::after{content:"대여방법"}
-#right_nav ul li:nth-child(7) a::after{content:"매장위치"}
-#right_nav ul li:nth-child(8) a::after{content:"SNS"}
+#right_nav ul li:nth-child(1) a::after{content:"홈"}
+#right_nav ul li:nth-child(2) a::after{content:"기업 소개"}
+#right_nav ul li:nth-child(3) a::after{content:"대여 신청"}
+#right_nav ul li:nth-child(4) a::after{content:"정장"}
+#right_nav ul li:nth-child(5) a::after{content:"브랜드 스토리"}
+#right_nav ul li:nth-child(6) a::after{content:"대여서비스"}
+#right_nav ul li:nth-child(7) a::after{content:"지점안내"}
+#right_nav ul li:nth-child(8) a::after{content:"홍보"}
 #right_nav ul li.active a {color:#fff;background: #f0f0f0}
 #right_nav ul li.active a span{background: #f0f0f0}
 #right_nav ul li.active a::after{color:#f0f0f0 }
@@ -392,3 +392,52 @@ left: -110px; top: -2px; color: #afafaf; text-align: right;font-weight: bold}
 #right_nav.up ul li.active a span{background:#690909 }
 #right_nav.up ul li.active a::after{color:#690909  }
 
+
+/* quick-menu */
+.container{position: relative;}
+.quick-menu {position: fixed; bottom: 10%;right: 60px;transform: translateY(-50%);background-color: #d4d4d4c3;padding: 20px;border-radius: 20px;transition: right  0.5s ease;}
+.quick-menu ul li {margin-bottom: 10px;}
+.quick-menu ul li button,
+.quick-menu ul li a
+{cursor: pointer;display: block;border: none;width: 46px;height: 46px;border-radius: 50%;background-color: #071D2F;color: #fff;text-decoration: none;display: flex;justify-content: center;align-items: center;font-size: 12px;}
+.sidebar.active {
+  right: 0; /* 사이드바가 열릴 때 transition을 사용하여 오른쪽으로 이동하도록 설정 */
+}
+.sidebar{background-color: #ffe9e9;width: 200px;height: 100vh;position: fixed;right: -200px; transition: right 0.5s ease;top: 0;color: #fff; z-index: 999999;}
+.sidebar-contents{width: 80%; margin: auto; }
+.sidebar  h2{text-align: center; margin: 10px 0px 10px 0px; color: #000;}
+.sidebar .menu a {width: 140px;padding: 10px;background-color: #fff;display: block;text-align: center; color: #000;}
+.sidebar .menu > li {margin-bottom: 10px;}
+.sidebar .menu > li > a{  border: 1px solid #000;}
+.sidebar .menu .bgblack{background-color: #000; color: #c4c4c4;}
+
+.sidebar li.free-reservation{margin: 3rem 0 3rem 0;}
+.sidebar .shop span,
+.free-reservation > span{ display: block; text-align: center; color: #000; font-weight: 700; margin-bottom: 20px;}
+
+.dropdown-submenu{opacity: 0; width: inherit;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);transition: opacity 0.3s ease, height 0.3s ease;height: 0;overflow: hidden; }
+  .dropdown-submenu.active {
+    opacity: 1;
+    height: auto;
+  /*display: block;*/
+}
+.dropdown-submenu a {display: block;padding: 10px;text-align: center;}
+.dropdown-submenu a:hover {
+  background-color: #eee;
+}
+
+.dropdown-btn img {
+  transition: 0.5s;
+}
+.dropdown-btn img.show {
+  transform: rotate(-180deg);
+}
+.dropdown-submenu.show {
+  display: none;
+}
+
+  
+.dropdown, .shop{width:150px;}
+.dropdown-btn,
+.buy-btn {width: inherit; padding: 10px; background-color: #000; color: #fff; border: none; outline: none; cursor: pointer; display: block; font-size: 16px; font-weight: 400;
